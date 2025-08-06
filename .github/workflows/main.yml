@@ -27,4 +27,4 @@ jobs:
         with:
           context: cd/
           push: true
-          tags: java:v1
+          tags: abhimotu/my-repo:javav1
