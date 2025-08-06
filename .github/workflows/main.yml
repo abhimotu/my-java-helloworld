@@ -3,7 +3,7 @@ name: Compile, Build & Push
 on:
   push:
     branches:
-      - java-assignment     
+      - java-assignment    
   pull_request:
     branches:
       - master
