@@ -8,7 +8,7 @@ on:
     branches:
       - master
 jobs:
-  compile and push:
+  compile-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
