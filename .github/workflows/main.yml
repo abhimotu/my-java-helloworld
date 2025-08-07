@@ -3,10 +3,7 @@ name: Compile, Build & Push
 on:
   push:
     branches:
-      - java-assignment     
-  pull_request:
-    branches:
-      - master
+      - reusable-workflows
 jobs:
   compile-and-push:
     runs-on: ubuntu-latest
@@ -16,15 +13,3 @@ jobs:
 
       - name: Compile Java code
         run: javac src/HelloWorld.java Abhishek
-      
-      - name: Docker Login
-        uses: docker/login-action@v3
-        with:
-          username: ${{ vars.DOCKERUSER_NAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-      - name: Docker build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: abhimotu/my-repo:masterV1
