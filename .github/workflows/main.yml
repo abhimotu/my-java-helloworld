@@ -15,4 +15,4 @@ jobs:
         run: javac src/HelloWorld.java
        
       - name: Run java
-        run: java src/HelloWorld Abhishek Vidur
+        run: cd src && java HelloWorld Abhishek Vidur
