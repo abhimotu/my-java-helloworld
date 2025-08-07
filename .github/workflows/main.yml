@@ -1,30 +1,10 @@
-name: Compile, Build & Push
-
-on:
-  push:
-    branches:
-      - java-assignment     
-  pull_request:
-    branches:
-      - master
-jobs:
-  compile-and-push:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Compile Java code
-        run: javac src/HelloWorld.java
-      
-      - name: Docker Login
-        uses: docker/login-action@v3
+    name: My Application CI
+    on: 
+      push:
+       branches: 
+        - sample-feature
+    jobs:
+      callreusable-workflow:
+        uses: abhimotu/my-java-helloworld/.github/workflows/usableworkflow.yml@reusable-workflows
         with:
-          username: ${{ vars.DOCKERUSER_NAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-      - name: Docker build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: abhimotu/my-repo:masterV1
+          your-name: 'Abhishek'
