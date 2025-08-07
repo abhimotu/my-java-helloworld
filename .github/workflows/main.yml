@@ -11,5 +11,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run Java code
-        run: java src/HelloWorld Abhishek
+      - name: Compile Java code
+        run: javac src/HelloWorld.java
+       
+      - name: Run java
+        run: java src/HelloWorld Abhishek Vidur
