@@ -1,5 +1,10 @@
-public class HelloWorld {
+public class HelloWorldParam {
   public static void main(String[] args) {
-    System.out.println("Hello world to master!");
+    if (args.length == 0) {
+      System.out.println("Hello world");
+    } else {
+      String name = args
+      System.out.println("Hello " + name);
+    }
   }
 }
