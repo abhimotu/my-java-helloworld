@@ -1,11 +1,13 @@
 name: Compile, Build & Push
 
 on:
-  push:
-    branches:
-      - reusable-workflows
+  workflow_call:
+    inputs:
+      your-name:
+            required: true
+            type: string
 jobs:
-  compile-and-push:
+  compile-and-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
