@@ -23,7 +23,7 @@ jobs:
           username: ${{ vars.DOCKERUSER_NAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
       - name: docker tag
-        id: vars
+        id: var
         run: |
           COMMIT_SHA=${GITHUB_SHA::7}
           DATE=$(date +%y%m%d)
