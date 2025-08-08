@@ -1,4 +1,4 @@
-    name: My Application CI
+    name: Call Reusable
     on: 
       push:
        branches: 
